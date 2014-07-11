@@ -15,12 +15,19 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
-  <!-- The portal header -->
   <browser:viewlet
     name="plone.header"
     manager="plone.app.layout.viewlets.interfaces.IPortalTop"
     class=".viewlets.HeaderViewlet"
-    permission="zope2.View"
+    permission="zope.Public"
+    layer=".interfaces.ILayer"
+    />
+
+  <browser:viewlet
+    name="plone.footer"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    class=".viewlets.FooterViewlet"
+    permission="zope.Public"
     layer=".interfaces.ILayer"
     />
 

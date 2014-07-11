@@ -1,9 +1,13 @@
 #-*- coding: utf-8 -*-
 
-from zope.dottedname.resolve import resolve
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from datetime import date
 
+from zope.dottedname.resolve import resolve
+
+from plone.memoize import view
 from plone.app.layout.viewlets import ViewletBase
+
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from .utils import get_local_header
 from .utils import get_local_footer
@@ -16,6 +20,7 @@ class HeaderViewlet(ViewletBase):
     default_template_name = 'portal_header.pt'
 
     @property
+    @view.memoize_contextless
     def default_path(self):
         mod = resolve('plone.app.layout.viewlets')
         path = '/'.join(
@@ -28,6 +33,7 @@ class HeaderViewlet(ViewletBase):
         return ViewPageTemplateFile(self.default_path)
 
     def update(self):
+        super(HeaderViewlet, self).update()
         self.local = self.get_local()
 
     def render(self):
@@ -35,6 +41,7 @@ class HeaderViewlet(ViewletBase):
             return self.local
         return self.index(self)
 
+    @view.memoize
     def get_local(self):
         return get_local_header(self.context,
                                 self.request)
@@ -46,6 +53,12 @@ class FooterViewlet(HeaderViewlet):
 
     default_template_name = "footer.pt"
 
+    @property
+    def year(self):
+        # needed by default viewlet tmpl
+        return date.today().year
+
+    @view.memoize
     def get_local(self):
         return get_local_footer(self.context,
                                 self.request)
