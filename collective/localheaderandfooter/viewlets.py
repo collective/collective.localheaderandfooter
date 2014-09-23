@@ -3,6 +3,7 @@
 from datetime import date
 
 from zope.dottedname.resolve import resolve
+from zope.component import queryMultiAdapter
 
 from plone.memoize import view
 from plone.app.layout.viewlets import ViewletBase
@@ -17,12 +18,14 @@ class HeaderViewlet(ViewletBase):
     """A simple viewlet which renders an header
     """
 
+    dottedname = 'plone.app.layout.viewlets'
     default_template_name = 'portal_header.pt'
+    default_view_name = 'default-portal-header'
 
     @property
     @view.memoize_contextless
     def default_path(self):
-        mod = resolve('plone.app.layout.viewlets')
+        mod = resolve(self.dottedname)
         path = '/'.join(
             mod.__path__ + [self.default_template_name]
         )
@@ -39,6 +42,11 @@ class HeaderViewlet(ViewletBase):
     def render(self):
         if self.local:
             return self.local
+        # lookup for custom default views
+        view = queryMultiAdapter((self.context, self.request),
+                                 name=self.default_view_name)
+        if view:
+            return view()
         return self.index(self)
 
     @view.memoize
@@ -52,6 +60,7 @@ class FooterViewlet(HeaderViewlet):
     """
 
     default_template_name = "footer.pt"
+    default_view_name = 'default-portal-footer'
 
     @property
     def year(self):
