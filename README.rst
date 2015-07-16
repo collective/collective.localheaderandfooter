@@ -1,6 +1,14 @@
 Introduction
 ============
 
+.. image:: https://pypip.in/v/collective.localheaderandfooter/badge.png
+    :target: https://pypi.python.org/pypi/collective.localheaderandfooter
+    :alt: Latest PyPI version
+
+.. image:: https://pypip.in/d/collective.localheaderandfooter/badge.png
+    :target: https://pypi.python.org/pypi/collective.localheaderandfooter
+    :alt: Number of PyPI downloads
+
 .. image:: https://secure.travis-ci.org/jpgimenez/collective.localheaderandfooter.png
     :target: https://travis-ci.org/#!/jpgimenez/collective.localheaderandfooter
 
