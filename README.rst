@@ -1,6 +1,13 @@
 Introduction
 ============
 
+.. image:: https://secure.travis-ci.org/jpgimenez/collective.localheaderandfooter.png
+    :target: https://travis-ci.org/#!/jpgimenez/collective.localheaderandfooter
+
+.. image:: https://coveralls.io/repos/jpgimenez/collective.localheaderandfooter/badge.png?branch=master
+    :alt: Coverage
+    :target: https://coveralls.io/r/jpgimenez/collective.localheaderandfooter?branch=master
+
 This product allows you to apply custom header and/or footer to your Plone contents.
 
 What it does

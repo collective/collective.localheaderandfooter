@@ -33,6 +33,7 @@ setup(name='collective.localheaderandfooter',
       ],
       extras_require={
           'test': [
+              'interlude',
               'plone.app.robotframework',
               'plone.app.testing [robot] >=4.2.2',
           ],

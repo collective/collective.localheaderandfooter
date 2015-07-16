@@ -6,6 +6,12 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
+from zope.interface import Interface
+
+
+class IMyDexterityContainer(Interface):
+    """ Dexterity container
+    """
 
 
 class Fixture(PloneSandboxLayer):
@@ -28,6 +34,11 @@ class Fixture(PloneSandboxLayer):
         # Install into Plone site using portal_setup
         self.applyProfile(portal, 'collective.localheaderandfooter:default')
         self.applyProfile(portal, 'collective.localheaderandfooter:testfixture')
+        self['portal'] = portal
+        roles = ('Member', 'Manager')
+        portal.portal_membership.addMember('manager', 'secret', roles, [])
+        roles = ('Member', 'Contributor')
+        portal.portal_membership.addMember('contributor', 'secret', roles, [])
 
 
 FIXTURE = Fixture()
