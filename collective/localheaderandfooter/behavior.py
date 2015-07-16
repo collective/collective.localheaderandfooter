@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from zope.interface import implementer
 from zope.interface import alsoProvides
@@ -14,15 +14,15 @@ _ = lambda x: x
 class IHeaderAndFooter(model.Schema):
 
     custom_header = schema.Choice(
-        title=_(u"Custom header"),
+        title=_(u'Custom header'),
         required=False,
-        vocabulary="localheaderandfooter.available_headers"
+        vocabulary='localheaderandfooter.available_headers'
     )
 
     custom_footer = schema.Choice(
-        title=_(u"Custom footer"),
+        title=_(u'Custom footer'),
         required=False,
-        vocabulary="localheaderandfooter.available_footers"
+        vocabulary='localheaderandfooter.available_footers'
     )
 
 alsoProvides(IHeaderAndFooter, IFormFieldProvider)

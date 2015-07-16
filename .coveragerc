@@ -1,0 +1,9 @@
+[report]
+omit =
+    /home/*/.buildout/eggs/*
+    /home/*/site-packages/*
+    /usr/*
+    bin/test
+    buildout-cache/eggs/*
+    eggs/*
+    parts/*

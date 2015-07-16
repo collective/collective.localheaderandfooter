@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from datetime import date
 
@@ -59,7 +59,7 @@ class FooterViewlet(HeaderViewlet):
     """The footer viewlet
     """
 
-    default_template_name = "footer.pt"
+    default_template_name = 'footer.pt'
     default_view_name = 'default-portal-footer'
 
     @property

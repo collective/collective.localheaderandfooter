@@ -1,4 +1,4 @@
-#-*- coding: utf8 -*-
+# -*- coding: utf8 -*-
 
 import logging
 
@@ -86,4 +86,3 @@ def get_local_header(context, request):
 def get_local_footer(context, request):
     name = get_local_footer_name(context)
     return _get_local(context, request, name)
-

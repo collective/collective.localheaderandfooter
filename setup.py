@@ -26,7 +26,14 @@ setup(name='collective.localheaderandfooter',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.api',
       ],
+      extras_require={
+          'test': [
+              'plone.app.robotframework',
+              'plone.app.testing [robot] >=4.2.2',
+          ],
+      },
       entry_points="""
       # -*- Entry points: -*-
 

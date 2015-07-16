@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
@@ -46,4 +46,3 @@ class AvailableFooters(BaseVocabulary):
 
     def get_items(self):
         return get_available_footers()
-
