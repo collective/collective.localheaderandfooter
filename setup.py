@@ -27,6 +27,9 @@ setup(name='collective.localheaderandfooter',
           'setuptools',
           # -*- Extra requirements: -*-
           'plone.api',
+          'plone.app.dexterity',
+          'plone.behavior',
+          'plone.dexterity',
       ],
       extras_require={
           'test': [

@@ -67,7 +67,13 @@ In this way you can also customize default header/footer per-content or per-mark
 Credits
 =======
 
-Author: Simone Orsi [simahawk] - Abstract srl
-Contributor: Juan Pablo Giménez [jpgimenez]
+Authors:
+--------
 
-Sponsor: Saucelabs.com
+- Simone Orsi [simahawk] - Abstract srl
+- Juan Pablo Giménez [jpgimenez]
+
+Sponsor:
+--------
+
+* Sauce Labs https://saucelabs.com/
