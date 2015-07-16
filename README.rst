@@ -68,5 +68,6 @@ Credits
 =======
 
 Author: Simone Orsi [simahawk] - Abstract srl
+Contributor: Juan Pablo Giménez [jpgimenez]
 
 Sponsor: Saucelabs.com
