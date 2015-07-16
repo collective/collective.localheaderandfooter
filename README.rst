@@ -1,18 +1,18 @@
 Introduction
 ============
 
-.. image:: https://pypip.in/v/collective.localheaderandfooter/badge.png
+.. image:: https://img.shields.io/pypi/v/collective.localheaderandfooter.svg
     :target: https://pypi.python.org/pypi/collective.localheaderandfooter
     :alt: Latest PyPI version
 
-.. image:: https://pypip.in/d/collective.localheaderandfooter/badge.png
+.. image:: https://img.shields.io/pypi/d/collective.localheaderandfooter.svg
     :target: https://pypi.python.org/pypi/collective.localheaderandfooter
     :alt: Number of PyPI downloads
 
-.. image:: https://secure.travis-ci.org/jpgimenez/collective.localheaderandfooter.png
+.. image:: https://img.shields.io/travis/jpgimenez/collective.localheaderandfooter.svg
     :target: https://travis-ci.org/#!/jpgimenez/collective.localheaderandfooter
 
-.. image:: https://coveralls.io/repos/jpgimenez/collective.localheaderandfooter/badge.png?branch=master
+.. image:: https://img.shields.io/coveralls/jpgimenez/collective.localheaderandfooter/master.svg
     :alt: Coverage
     :target: https://coveralls.io/r/jpgimenez/collective.localheaderandfooter?branch=master
 
